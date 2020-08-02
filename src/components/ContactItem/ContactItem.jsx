@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import contactsSelectors from '../../redux/contacts/contactsSelectors';
-import contactsOperations from '../../redux/contacts/contactsOperations';
+import { contactsOperations, contactsSelectors } from '../../redux/contacts';
 import styles from '../../styles/Phonebook.module.css';
 
 function ContactItem({ name, number, onDelete }) {

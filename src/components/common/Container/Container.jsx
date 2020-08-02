@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import withTheme from '../hoc/withTheme';
-
-import styles from '../styles/ContainerTheme.module.css';
+import withTheme from '../../hoc/withTheme';
+import styles from '../../../styles/ContainerTheme.module.css';
 
 class Container extends Component {
   static propTypes = {

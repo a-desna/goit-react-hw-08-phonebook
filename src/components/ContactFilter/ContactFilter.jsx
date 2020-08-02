@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import contactsActions from '../../redux/contacts/contactsActions';
-import contactsSelectors from '../../redux/contacts/contactsSelectors';
+import { contactsActions, contactsSelectors } from '../../redux/contacts';
 import styles from '../../styles/Phonebook.module.css';
 
 function ContactFilter({ filter, onChangeFilter }) {

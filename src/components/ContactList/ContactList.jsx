@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { contactsSelectors } from '../../redux/contacts';
 import ContactItem from '../ContactItem/ContactItem';
-import contactsSelectors from '../../redux/contacts/contactsSelectors';
 import styles from '../../styles/Phonebook.module.css';
 
 function ContactList({ contacts }) {
@@ -18,7 +18,7 @@ function ContactList({ contacts }) {
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
+      id: PropTypes.string,
       name: PropTypes.string,
       number: PropTypes.string,
     }),

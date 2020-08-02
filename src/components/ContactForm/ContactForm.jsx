@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import contactsOperations from '../../redux/contacts/contactsOperations';
-import contactsSelectors from '../../redux/contacts/contactsSelectors';
+import { contactsOperations, contactsSelectors } from '../../redux/contacts';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from '../../styles/Phonebook.module.css';
@@ -45,22 +44,26 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form className={styles.form} onSubmit={this.handleSubmit}>
-        <p>Name contact</p>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name.."
-          value={name}
-          onChange={this.handleInputChange}
-        />
-        <p>Number contact</p>
-        <input
-          type="text"
-          name="number"
-          placeholder="Number.."
-          value={number}
-          onChange={this.handleInputChange}
-        />
+        <label>
+          <p>Name contact</p>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name.."
+            value={name}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <label>
+          <p>Number contact</p>
+          <input
+            type="text"
+            name="number"
+            placeholder="Number.."
+            value={number}
+            onChange={this.handleInputChange}
+          />
+        </label>
         <button className={styles.formBtn} type="submit">
           Add contact
         </button>

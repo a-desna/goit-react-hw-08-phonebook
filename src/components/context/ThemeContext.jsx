@@ -1,5 +1,5 @@
 import React, { createContext, Component } from 'react';
-import localStorageData from '../utils/localStorage';
+import localStorageData from '../../utils/localStorage';
 
 const themeConfig = {
   light: {
